@@ -6,7 +6,7 @@ public class EmployeWage {
 		System.out.println("Welcome to employee wage Computation");
 		
 		double ran=Math.random();
-		if (ran>0) {
+		if (ran>0.5) {
 			System.out.println("Employee is Present");
 		}
 		else {
