@@ -29,10 +29,4 @@ public class EmployeWage {
 		int dailyWage=workingHour*wagePerHour;
 		totalWage+=dailyWage;
 		
-		System.out.println("\t" +"Day " + day + " wage is ::"  + dailyWage);
-		}
-			
-		System.out.println("Monthly wage is::"+totalWage);
-		}
 
-	}
