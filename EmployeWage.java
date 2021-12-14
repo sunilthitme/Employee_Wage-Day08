@@ -1,30 +1,38 @@
 package com.employeeDay08;
-
 public class EmployeWage {
-
-	public static void main(String[] args) {
-		System.out.println("Welcome to employee wage Computation");
-		int hour=8;
-		int partHour=4;
-		int perHour=20;
-		int dailyHour=0;
+		public static void main(String[] args) {
+			System.out.println("Welcome to Employee Wage Computation");
+		int workingHour=0;
+		int wagePerHour=20;
+		int totalWorkingHour=0;
+		int dayinMonth=20;
+		int maxWorkingHour=100;
+		int totalWage=0;
+		for(int day=0; day<dayinMonth; day++) {
+			int presentAbsent= (int)(Math.floor(Math.random() * 10)) % 3;
+			switch(presentAbsent) {
+			case 1:
+			       workingHour=8;
+			       System.out.print("Emplyee is Present Full time	");
+		            break;
+			case 2:
+			        workingHour=4;
+			        System.out.print("Emplyee is Present Part time ");
+			        break;
+			 default:
+				     workingHour=0;
+				     System.out.print("Emplyee is Absent");
+				     break;
 		
-		int ran=(int)(Math.floor(Math.random()*10))%3+1;
-		switch (ran) {
-		case 1:
-			System.out.println("Employee is Present");
-			 dailyHour=hour*perHour;
-			System.out.println("Daily Employee Wage is:: "+dailyHour);
-		break;
-		case 2: 
-			System.out.println("Employee is Present part time");
-			 dailyHour=partHour*perHour;
-			System.out.println("Daily Employee Wage is:: "+dailyHour);
-		break;
-		case 3:
-			System.out.println("Employee is Absent");
-			System.out.println("Daily Employee Wage is:: "+dailyHour);
 		}
-	}
+		totalWorkingHour+=workingHour;
+		int dailyWage=workingHour*wagePerHour;
+		totalWage+=dailyWage;
+		
+		System.out.println("\t" +"Day " + day + " wage is ::"  + dailyWage);
+		}
+			
+		System.out.println("Monthly wage is::"+totalWage);
+		}
 
-}
+	}
