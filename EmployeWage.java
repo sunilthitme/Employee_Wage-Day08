@@ -9,18 +9,19 @@ public class EmployeWage {
 		int perHour=20;
 		int dailyHour=0;
 		
-		double ran=(int)(Math.floor(Math.random()*10))%3+1;
-		if (ran==1) {
+		int ran=(int)(Math.floor(Math.random()*10))%3+1;
+		switch (ran) {
+		case 1:
 			System.out.println("Employee is Present");
 			 dailyHour=hour*perHour;
 			System.out.println("Daily Employee Wage is:: "+dailyHour);
-		}
-		else if(ran==2) {
+		break;
+		case 2: 
 			System.out.println("Employee is Present part time");
 			 dailyHour=partHour*perHour;
 			System.out.println("Daily Employee Wage is:: "+dailyHour);
-		}
-		else {
+		break;
+		case 3:
 			System.out.println("Employee is Absent");
 			System.out.println("Daily Employee Wage is:: "+dailyHour);
 		}
